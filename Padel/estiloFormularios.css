@@ -1,0 +1,138 @@
+* {
+	padding: 0;
+	margin: 0;
+  }
+.espacio{
+    padding-top: 80px;
+}
+/*
+Configuracion del formulario
+*/
+
+form{
+    width:400px;
+	padding:16px;
+	border:2px solid #396acc;
+	border-radius:10px;
+	margin:auto;
+	background-color:  #d6e1ff;
+}
+
+form label{
+	width:120px;
+	font-weight:bold;
+	display:inline-block;
+	text-align: right;
+	margin-right: 15px;
+}
+
+form legend{
+	color: blueviolet;
+	font-size: 22px;
+	font-weight:bold;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="number"],
+form input[type="date"],
+form select{
+	width:180px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+}
+
+form input[type="time"]{
+	width:150px;
+	padding:3px 10px;
+	/*border:1px solid #f6f6f6;*/
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+}
+
+form input[type="submit"]{
+	width: 100%;
+	padding:8px 16px;
+	margin-top:32px;
+	border:1px solid #396acc;
+	border-radius:5px;
+	display:block;
+	color:#fff;
+	background-color:#396acc;
+} 
+
+form input[type="reset"],
+button{
+	width: 100%;
+	padding:8px 16px;
+	margin-top:10px;
+	border:1px solid #396acc;
+	border-radius:5px;
+	display:block;
+	color:#fff;
+	background-color:#396acc;
+}
+
+form input[type="submit"]:hover,
+form input[type="reset"]:hover,
+button:hover{
+	cursor:pointer;
+}
+
+.alert{
+	color: transparent;
+	text-align: center;
+}
+
+.bordeForm{
+	border-color: #396acc;
+	border: 0px;
+
+}
+
+/*
+Barra superior
+*/
+.wrapper {
+	width: 80%;
+	margin: auto;
+	overflow:hidden;
+  }
+header {
+	background: rgba(0,0,0,0.9);
+	width: 100%;
+	position: fixed;
+	z-index: 10;
+  }
+  a:hover{
+	cursor:pointer;
+}
+
+  nav {
+	float: left; /* Desplazamos el nav hacia la izquierda */
+  }
+  nav ul {
+	list-style: none;
+	overflow: hidden; /* Limpiamos errores de float */
+  }
+  nav ul li {
+	float: left;
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+  }
+  nav ul li a {
+	display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+	padding: 20px;
+	color: #fff;
+	text-decoration: none;
+  }
+  nav ul li:hover {
+	background: #396acc;
+  }

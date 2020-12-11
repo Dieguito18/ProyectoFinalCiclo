@@ -1,0 +1,47 @@
+<!DOCTIPE html>
+<html lang="es">
+    <head>
+        <title>Crea un partido</title>
+        <meta chartset="UTF-8"/>
+		<link rel="stylesheet" href="estiloFormularios.css" type="text/css"/>
+    </head>
+    <body>
+        <h1></h1>
+        <header>
+            <section class="wrapper">
+                  <nav>
+                      <ul>
+                          <li><a onclick="window.open('paginaPrincipal.html', '_self')">Inicio</a></li>
+                          <li><a onclick="window.open('crearPartido.html', '_self')">Crea Partido</a></li>
+                          <li><a onclick="window.open('paginaPrincipal.html', '_self')">Información</a></li>
+                          <li><a onclick="window.open('iniciaSesion.html', '_self')">Inicia Sesión</a></li>
+                      </ul>
+              </nav>
+            </section>
+        </header>
+        <p class="espacio"></p>
+        <form name= "inicia sesion" action= "paginaPrincipal.html" method= "post">
+            <fieldset class="bordeForm">
+                <legend> Crear partido </legend>
+                <label>Fecha: </label><input type= "date" name= "fecha" required/>
+                <br/>
+                <label>Hora:  De: </label><input type= "time" name= "hora" required/>
+                <br>
+                <label>A: </label><input type= "time" name= "hora" required/>
+                <br/>
+                <label>Nivel: </label><input type= "number" name= "numero" min="1" max="8" step="1" value="3" size="10" required/>
+                <br/>
+                <label>Sexo: </label><select name="sexo">
+                    <option selected="selected">Masculino</option> 
+                    <option>Femenino</option>
+                    <option>Mixto</option>
+                </select>
+                <br/>
+                
+                <input type= "submit" name= "enviar" value= "Crear partido"/>
+                <input type= "reset" name= "limpiar" value= "Borrar TODO"/>
+            </fieldset>
+        </form>
+        
+    </body>
+</html>

@@ -1,0 +1,85 @@
+h1{
+    color: blueviolet;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+  }
+  /*
+Body
+  */
+  p {
+  margin-bottom: 20px;
+  padding-left: 10px;
+  }
+  .contenido {
+	padding-top: 80px;
+	padding-left: 150px;
+	padding-right: 150px;
+  }
+
+  .botones{
+  padding: .375rem .75rem;
+  border-radius: .25rem;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color .15s ease-in-out;
+  border-color: #0069d9;
+  margin-left: 30px;
+  cursor:pointer;
+  }
+
+  .cajas{
+    margin-bottom: 20px;
+    background-color: #cedaff;
+    border:2px solid #396acc;
+    border-radius: 5px;
+    padding: 10px 10px;
+  }
+  
+  .title{
+  margin-bottom: 20px;
+  }
+
+  /*
+Cabecera Superior
+  */
+  .wrapper {
+	width: 80%;
+	margin: auto;
+	overflow:hidden;
+  }
+  header {
+	background: rgba(0,0,0,0.9);
+	width: 100%;
+	position: fixed;
+	z-index: 10;
+  }
+  a:hover{
+    cursor:pointer;
+  }
+
+  nav {
+	float: left; /* Desplazamos el nav hacia la izquierda */
+  }
+  nav ul {
+	list-style: none;
+	overflow: hidden; /* Limpiamos errores de float */
+  }
+  nav ul li {
+	float: left;
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+  }
+  nav ul li a {
+	display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+	padding: 20px;
+	color: #fff;
+	text-decoration: none;
+  }
+  nav ul li:hover {
+	background: #396acc;
+  }
+  
+

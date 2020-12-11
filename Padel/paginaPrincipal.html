@@ -1,0 +1,68 @@
+<!DOCTIPE html>
+<html lang="es">
+    <head>
+        <title>Partidos Disponibles</title>
+        <meta chartset="UTF-8"/>
+        <link rel="stylesheet" href="estilos.css" type="text/css"/>
+        
+    </head>
+    
+    <body onload="generarTabla1()">
+        <header>
+            <section class="wrapper">
+                  <nav>
+                      <ul>
+                          <li><a onclick="window.open('paginaPrincipal.html', '_self')">Inicio</a></li>
+                          <li><a onclick="window.open('crearPartido.html', '_self')">Crea Partido</a></li>
+                          <li><a onclick="window.open('acercaDe.html', '_self')">Información</a></li>
+                          <li><a onclick="window.open('iniciaSesion.html', '_self')">Inicia Sesión</a></li>
+                      </ul>
+              </nav>
+            </section>
+        </header>
+        <section class="contenido" >
+            <h1 class="title">Apúntate!</hr></h1>
+            <div class= "cajas">
+                <p>Inicia sesión o registrate para jugar un Partido. </hr></p>
+                
+                <button class="botones" type="button" onclick="window.open('iniciaSesion.html', '_self')">Inicia Sesión</button>
+                <button class="botones" type="button" onclick="window.open('crearUser.html', '_self')">Regístrate</button>
+                <br>
+            </div> 
+
+            <h1 class="title">Crea un partido!</hr></h1>
+            <div class= "cajas">
+                <p>Crea un partido para jugar con tus amigos o con personas que se apunten a jugar contigo.</hr></p>
+                
+                <button class="botones" type="button" onclick="window.open('crearPartido.html', '_self')">Crear Partido</button>
+                <br>
+            </div>
+            <h1 class="title">Lista de Partidos disponibles</hr></h1>
+
+            <table width="100%"  border="0" align="center" cellspacing="0">
+                <thead>
+                    <tr>
+                        <td align="center" height="30" bgcolor="#6699FF">Partido</td>
+                        <td align="center" height="30" bgcolor="#6699FF">Personas</td>
+                        <td align="center" height="30" bgcolor="#6699FF">Nivel</td>
+                        <td align="center" height="30" bgcolor="#6699FF">Sexo</td>
+                        <td align="center" height="30" bgcolor="#6699FF">Hora</td>
+                        <td align="center" height="30" bgcolor="#6699FF">Fecha</td>
+                    </tr>
+                </thead>
+                <!--
+                <tbody >
+                    <tr>
+                        <td align="center" height="30" bgcolor=""><a onclick="window.open('unirsePartido.html', '_self')">Disponible</a></td>
+                        <td align="center" height="30" bgcolor="">2</td>
+                        <td align="center" height="30" bgcolor="">4</td>
+                        <td align="center" height="30" bgcolor="">Masculino</td>
+                        <td align="center" height="30" bgcolor="">18:30 a 20:00</td>
+                        <td align="center" height="30" bgcolor="">22/11/2020</td>
+                    </tr>
+                </tbody>
+                -->
+            </table>
+        </section>
+    </body>
+</html>
