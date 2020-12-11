@@ -51,7 +51,7 @@ form select{
 form input[type="time"]{
 	width:150px;
 	padding:3px 10px;
-	/*border:1px solid #f6f6f6;*/
+	border:1px solid #f6f6f6;
 	border-radius:3px;
 	background-color:#f6f6f6;
 	margin:8px 0;

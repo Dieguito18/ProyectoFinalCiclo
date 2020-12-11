@@ -3,7 +3,7 @@
     <head>
         <title>Partidos Disponibles</title>
         <meta chartset="UTF-8"/>
-		<link rel="stylesheet" href="estilos.css" type="text/css"/>
+		<link rel="stylesheet" href="css/estilos.css" type="text/css"/>
     </head>
     
     <body>
@@ -11,11 +11,11 @@
             <section class="wrapper">
                   <nav>
                       <ul>
-                          <li><a onclick="window.open('paginaPrincipal.html', '_self')">Inicio</a></li>
-                          <li><a onclick="window.open('crearPartido.html', '_self')">Crea Partido</a></li>
-                          <!-- <li><a>Cursos</a></li> -->
-                          <li><a onclick="window.open('acercaDe.html', '_self')">Información</a></li>
-                          <li><a onclick="window.open('iniciaSesion.html', '_self')">Inicia Sesión</a></li>
+                          <li><a onclick="window.open('paginaPrincipal.php', '_self')">Inicio</a></li>
+                          <li><a onclick="window.open('crearPartido.php', '_self')">Crea Partido</a></li>
+                          <li><a onclick="window.open('acercaDe.php', '_self')">Información</a></li>
+                          <li><a onclick="window.open('iniciaSesion.php', '_self')">Inicia Sesión</a></li>
+                          <li><a onclick="window.open('usuarioPadel.php', '_self')">Usuario</a></li>
                       </ul>
               </nav>
             </section>
