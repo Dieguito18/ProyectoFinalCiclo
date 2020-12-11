@@ -38,11 +38,9 @@ if(isset($_SESSION['login_user_sys'])){
                 <br/>
                 <label>Contraseña: </label><input type= "password" name= "contrasena" size= "15" maxlength= "20" required/> 
                 <br/>
-                
                 <input type= "submit" name= "enviar" value= "Iniciar sesión"/>
                 <button class="botones" type="button" onclick="window.open('crearUser.php', '_self')">Registrarse</button>
             </fieldset>
         </form>
-        
     </body>
 </html>

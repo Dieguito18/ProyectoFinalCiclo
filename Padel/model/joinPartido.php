@@ -35,7 +35,6 @@
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }   
     } else {
-        //echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         echo "<script>
         alert('Error al unirte al partido, ya te has unido a este partido!');
         window.location= './../paginaPrincipal.php'

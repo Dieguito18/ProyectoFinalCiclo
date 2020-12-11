@@ -104,11 +104,9 @@ if(!isset($_SESSION['login_user_sys'])){
                 ?>
             </table>
             <p></hr></p>
-            <!--<button class="botones" type="button" onclick="window.open('joinPartido.php', '_self')">Únete al partido</button>-->
             <?php
             include 'connect.php';
             $user = $_SESSION['login_user_sys'];
-            
             echo "<a class=\"botones\" href=\"model/joinPartido.php?partido=$idpartido&usuario=$user\">Únete al partido</a>";
             echo "<a class=\"botones\" href=\"model/deleteJoinPartido.php?partido=$idpartido&usuario=$user\">Salir del partido</a>";
             ?>

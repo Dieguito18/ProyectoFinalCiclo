@@ -86,8 +86,6 @@
                     $conn ->close();
                 ?>
             </table>
-            <!--<h1 class="title">Noticias sobre el mundo del Padel!</h1>-->
-            
         </section>
     </body>
 </html>

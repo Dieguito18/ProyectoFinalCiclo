@@ -4,8 +4,6 @@ include('connect.php');
 
 $email = $_POST['email'];
 $contrasena = $_POST['contrasena'];
-//$email = mysqli_real_escape_string($conn,(strip_tags($email,ENT_QUOTES)));
-//$contrasena =  sha1($contrasena);
 
 $sql = "SELECT email, contraseña FROM usuarios WHERE email='$email' AND contraseña='$contrasena'";
 $query=mysqli_query($conn,$sql);
@@ -15,7 +13,7 @@ if ($counter==1){
     if($result-> num_rows >0){
         while($row = $result-> fetch_assoc()){
             $id = $row["idusuarios"];
-            $_SESSION['login_user_sys']=$id; // Iniciando la sesion
+            $_SESSION['login_user_sys']=$id;
             echo "<script>
                 alert('Has iniciado sesión correctamente!');
                 window.location= './../usuarioPadel.php'

@@ -13,7 +13,7 @@ if(!isset($_SESSION['login_user_sys'])){
     <head>
         <title>Partidos Disponibles</title>
         <meta chartset="UTF-8"/>
-        <link rel="stylesheet" href="css/estilos.css" type="text/css"/>
+        <link rel="stylesheet" href="css/estilos.css?1.0" type="text/css"/>
     </head>
     
     <body>
@@ -105,7 +105,7 @@ if(!isset($_SESSION['login_user_sys'])){
                     }
                     echo "</tbody>";
                 }else{
-                    echo "0 results";
+                    echo "";
                 }
                 $conn ->close();
                 ?>
