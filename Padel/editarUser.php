@@ -12,16 +12,16 @@
                 <nav>
                     <ul>
                         <li><a onclick="window.open('paginaPrincipal.php', '_self')">Inicio</a></li>
+                        <li><a onclick="window.open('informacionPadel.php', '_self')">Información</a></li>
                         <li><a onclick="window.open('crearPartido.php', '_self')">Crea Partido</a></li>
-                        <li><a onclick="window.open('acercaDe.php', '_self')">Información</a></li>
-                        <li><a onclick="window.open('iniciaSesion.php', '_self')">Inicia Sesión</a></li>
                         <li><a onclick="window.open('usuarioPadel.php', '_self')">Usuario</a></li>
+                        <li><a onclick="window.open('iniciaSesion.php', '_self')">Inicia Sesión</a></li>
                     </ul>
                 </nav>
             </section>
         </header>
         <p class="espacio"></p>
-        <form name= "registrarse" action= "editUser.php" method= "post">
+        <form name= "registrarse" action= "model/editUser.php" method= "post">
             <fieldset class="bordeForm">
                 <?php
                     session_start();

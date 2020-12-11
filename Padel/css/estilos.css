@@ -1,6 +1,4 @@
-h1{
-    color: blueviolet;
-}
+
 
 * {
 	padding: 0;
@@ -9,9 +7,14 @@ h1{
   /*
 Body
   */
+  h1{
+    color: blueviolet;
+    font-family: Arial, sans-serif;
+  }
   p {
   margin-bottom: 20px;
   padding-left: 10px;
+  font-family: Arial, sans-serif;
   }
   .contenido {
 	padding-top: 80px;
@@ -40,7 +43,19 @@ Body
   }
   
   .title{
-  margin-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .espacio{
+    margin-bottom: 20px;
+  }
+
+  .ulEspacio{
+    margin-bottom: 20px;
+    margin-left: 25px;
+  }
+  .text{
+    font-family: Arial, sans-serif;
   }
 
   /*
@@ -84,3 +99,7 @@ Cabecera Superior
   }
   
 
+  /*
+Slider
+  */
+  

@@ -15,24 +15,22 @@
         VALUES ('$nombre', '$apellido','$email', '$nivel', '$contrasena', '$sexo')";
         if (mysqli_query($conn, $sql) ){
             echo "<script>
-                alert('Usuario creado correctamente!');
-                window.location= 'iniciaSesion.php'
+                alert('Te has registrado correctamente ahora inicia sesión!');
+                window.location= './../iniciaSesion.php'
             </script>";
         } else {
-            //echo "Error: " . $sql . "<br>" . mysqli_error($conn);
             echo "<script>
-            alert('ERROR! El email ya esta en uso');
-            window.location= 'crearUser.php'
+            alert('Error, el email ya esta en uso!');
+            window.location= './../crearUser.php'
         </script>";
         }
     } else {
-        //echo "Las contraseñas no son iguales";
+        
         echo "<script>
-            alert('ERROR! Las contraseñas no son iguales');
-            window.location= 'crearUser.php'
+            alert('Error, las contraseñas no son iguales!');
+            window.location= './../crearUser.php'
         </script>";
     }
     $conn -> close();
-    //header('Refresh: 10; Location: iniciaSesion.php');
     
 ?>

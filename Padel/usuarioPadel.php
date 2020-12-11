@@ -4,7 +4,7 @@
 session_start();
 if(!isset($_SESSION['login_user_sys'])){
     echo "<script>
-            alert('ERROR! No has iniciado sesión.');
+            alert('Inicia sesión para acceder a esta página!');
             window.location= 'iniciaSesion.php'
         </script>";
     exit;
@@ -22,10 +22,10 @@ if(!isset($_SESSION['login_user_sys'])){
                 <nav>
                     <ul>
                         <li><a onclick="window.open('paginaPrincipal.php', '_self')">Inicio</a></li>
+                        <li><a onclick="window.open('informacionPadel.php', '_self')">Información</a></li>
                         <li><a onclick="window.open('crearPartido.php', '_self')">Crea Partido</a></li>
-                        <li><a onclick="window.open('acercaDe.php', '_self')">Información</a></li>
-                        <li><a onclick="window.open('iniciaSesion.php', '_self')">Inicia Sesión</a></li>
                         <li><a onclick="window.open('usuarioPadel.php', '_self')">Usuario</a></li>
+                        <li><a onclick="window.open('iniciaSesion.php', '_self')">Inicia Sesión</a></li>
                     </ul>
                 </nav>
             </section>
@@ -37,11 +37,11 @@ if(!isset($_SESSION['login_user_sys'])){
             <table width="100%"  border="0" align="center" cellspacing="0">
                 <thead>
                     <tr>
-                        <td align="center" height="30" bgcolor="#6699FF">Nombre</td>
-                        <td align="center" height="30" bgcolor="#6699FF">Apellido</td>
-                        <td align="center" height="30" bgcolor="#6699FF">Email</td>
-                        <td align="center" height="30" bgcolor="#6699FF">Nivel</td>
-                        <td align="center" height="30" bgcolor="#6699FF">Sexo</td>
+                        <td class="text" align="center" height="30" bgcolor="#6699FF">Nombre</td>
+                        <td class="text" align="center" height="30" bgcolor="#6699FF">Apellido</td>
+                        <td class="text" align="center" height="30" bgcolor="#6699FF">Email</td>
+                        <td class="text" align="center" height="30" bgcolor="#6699FF">Nivel</td>
+                        <td class="text" align="center" height="30" bgcolor="#6699FF">Sexo</td>
                     </tr>
             </thead>
             <?php
@@ -53,11 +53,11 @@ if(!isset($_SESSION['login_user_sys'])){
                     echo "<tbody>";
                     while($row = $result-> fetch_assoc()){
                         echo "<tr>
-                        <td align=\"center\" height=\"40\">".$row["nombre"]."</a></td>
-                        <td align=\"center\" height=\"40\">".$row["apellido"]."</td>
-                        <td align=\"center\" height=\"40\">".$row["email"]."</td>
-                        <td align=\"center\" height=\"40\">".$row["nivel"]."</td>
-                        <td align=\"center\" height=\"40\">".$row["sexo"]."</td>
+                        <td class=\"text\" align=\"center\" height=\"40\">".$row["nombre"]."</a></td>
+                        <td class=\"text\" align=\"center\" height=\"40\">".$row["apellido"]."</td>
+                        <td class=\"text\" align=\"center\" height=\"40\">".$row["email"]."</td>
+                        <td class=\"text\" align=\"center\" height=\"40\">".$row["nivel"]."</td>
+                        <td class=\"text\" align=\"center\" height=\"40\">".$row["sexo"]."</td>
                         </tr>";
                     }
                     echo "</tbody>";
@@ -69,18 +69,18 @@ if(!isset($_SESSION['login_user_sys'])){
             </table>
         </section>
         <section class="contenido">
-            <h1>Partidos unidos!</h1>
+            <h1>Historial de los Partidos unidos!</h1>
             <p></hr></p>
-            <table name="users" width="100%"  border="0" align="center" cellspacing="0">
+            <table class="espacio" name="users" width="100%"  border="0" align="center" cellspacing="0">
                 <thead>
                     <tr>
                         
-                        <td align="center" height="30" bgcolor="#6699FF">Partido</td>
-                        <td align="center" height="30" bgcolor="#6699FF">Personas</td>
-                        <td align="center" height="30" bgcolor="#6699FF">Nivel</td>
-                        <td align="center" height="30" bgcolor="#6699FF">Sexo</td>
-                        <td align="center" height="30" bgcolor="#6699FF">Hora</td>
-                        <td align="center" height="30" bgcolor="#6699FF">Fecha</td>
+                        <td class="text" align="center" height="30" bgcolor="#6699FF">Partido</td>
+                        <td class="text" align="center" height="30" bgcolor="#6699FF">Personas</td>
+                        <td class="text" align="center" height="30" bgcolor="#6699FF">Nivel</td>
+                        <td class="text" align="center" height="30" bgcolor="#6699FF">Sexo</td>
+                        <td class="text" align="center" height="30" bgcolor="#6699FF">Hora</td>
+                        <td class="text" align="center" height="30" bgcolor="#6699FF">Fecha</td>
                     </tr>
                 </thead>
                 <?php
@@ -95,12 +95,12 @@ if(!isset($_SESSION['login_user_sys'])){
                     while($row = $result-> fetch_assoc()){
                         $id = $row["idpartidos"];
                         echo "<tr>
-                        <td align=\"center\" height=\"40\"><a href=\"datosPartido.php?idpartido=$id\">".$row["partido"]."</a></td>
-                        <td align=\"center\" height=\"40\">".$row["numPersonas"]."</td>
-                        <td align=\"center\" height=\"40\">".$row["nivel"]."</td>
-                        <td align=\"center\" height=\"40\">".$row["sexo"]."</td>
-                        <td align=\"center\" height=\"40\">".$row["horaComienzo"]." a ".$row["horaFin"]."</td>
-                        <td align=\"center\" height=\"40\">".$row["fecha"]."</td>
+                        <td class=\"text\" align=\"center\" height=\"40\"><a href=\"datosPartido.php?idpartido=$id\">".$row["partido"]."</a></td>
+                        <td class=\"text\" align=\"center\" height=\"40\">".$row["numPersonas"]."</td>
+                        <td class=\"text\" align=\"center\" height=\"40\">".$row["nivel"]."</td>
+                        <td class=\"text\" align=\"center\" height=\"40\">".$row["sexo"]."</td>
+                        <td class=\"text\" align=\"center\" height=\"40\">".$row["horaComienzo"]." a ".$row["horaFin"]."</td>
+                        <td class=\"text\" align=\"center\" height=\"40\">".$row["fecha"]."</td>
                         </tr>";
                     }
                     echo "</tbody>";
@@ -111,9 +111,9 @@ if(!isset($_SESSION['login_user_sys'])){
                 ?>
             </table>
             <p></hr></p>
-            <button class="botones" type="button" onclick="window.open('cerrarSesion.php', '_self')">Cerrar sesión</button>
+            <button class="botones" type="button" onclick="window.open('model/cerrarSesion.php', '_self')">Cerrar sesión</button>
             <button class="botones" type="button" onclick="window.open('editarUser.php', '_self')">Editar Usuario</button>
-            <button class="botones" type="button" onclick="window.open('deleteUser.php', '_self')">Borrar Usuario</button>
+            <button class="botones" type="button" onclick="window.open('model/deleteUser.php', '_self')">Borrar Usuario</button>
         </section>
     </body>
 </html>

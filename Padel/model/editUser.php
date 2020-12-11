@@ -14,17 +14,15 @@
     if (mysqli_query($conn, $sql) ){
         echo "<script>
             alert('Usuario editado correctamente!');
-            window.location= 'usuarioPadel.php'
+            window.location= './../usuarioPadel.php'
         </script>";
     } else {
-        //echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         echo "<script>
-            alert('ERROR! No se pudo editar el usuario');
-            window.location= 'crearUser.php'
+            alert('Error, el email ya esta en uso!');
+            window.location= './../crearUser.php'
         </script>";
     }
     
     $conn -> close();
-    //header('Refresh: 10; Location: iniciaSesion.php');
     
 ?>

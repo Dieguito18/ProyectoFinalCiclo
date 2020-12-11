@@ -4,7 +4,7 @@
 session_start();
 if(!isset($_SESSION['login_user_sys'])){
     echo "<script>
-            alert('ERROR! No has iniciado sesión.');
+            alert('Inicia sesión para acceder a esta página!');
             window.location= 'iniciaSesion.php'
         </script>";
     exit;
@@ -22,10 +22,10 @@ if(!isset($_SESSION['login_user_sys'])){
                 <nav>
                     <ul>
                         <li><a onclick="window.open('paginaPrincipal.php', '_self')">Inicio</a></li>
+                        <li><a onclick="window.open('informacionPadel.php', '_self')">Información</a></li>
                         <li><a onclick="window.open('crearPartido.php', '_self')">Crea Partido</a></li>
-                        <li><a onclick="window.open('acercaDe.php', '_self')">Información</a></li>
-                        <li><a onclick="window.open('iniciaSesion.php', '_self')">Inicia Sesión</a></li>
                         <li><a onclick="window.open('usuarioPadel.php', '_self')">Usuario</a></li>
+                        <li><a onclick="window.open('iniciaSesion.php', '_self')">Inicia Sesión</a></li>
                     </ul>
                 </nav>
             </section>
@@ -62,7 +62,7 @@ if(!isset($_SESSION['login_user_sys'])){
                     }
                     echo "</tbody>";
                 }else{
-                    echo "0 results";
+                    echo "";
                 }
                 $conn ->close();
             ?>
@@ -71,13 +71,13 @@ if(!isset($_SESSION['login_user_sys'])){
         <section class="contenido">
             <h1>Personas unidas!</h1>
             <p></hr></p>
-            <table name="users" width="100%"  border="0" align="center" cellspacing="0">
+            <table class="espacio" name="users" width="100%"  border="0" align="center" cellspacing="0">
                 <thead>
                     <tr>
-                        <td align="center" height="30" bgcolor="#6699FF">Nombre</td>
-                        <td align="center" height="30" bgcolor="#6699FF">Apellido</td>
-                        <td align="center" height="30" bgcolor="#6699FF">Nivel</td>
-                        <td align="center" height="30" bgcolor="#6699FF">Sexo</td>
+                        <td class="text" align="center" height="30" bgcolor="#6699FF">Nombre</td>
+                        <td class="text" align="center" height="30" bgcolor="#6699FF">Apellido</td>
+                        <td class="text" align="center" height="30" bgcolor="#6699FF">Nivel</td>
+                        <td class="text" align="center" height="30" bgcolor="#6699FF">Sexo</td>
                     </tr>
                 </thead>
                 <?php
@@ -90,15 +90,15 @@ if(!isset($_SESSION['login_user_sys'])){
                     while($row = $result-> fetch_assoc()){
                         //$idusuario= $row["idusuarios"];
                         echo "<tr>
-                        <td align=\"center\" height=\"40\">".$row["nombre"]."</a></td>
-                        <td align=\"center\" height=\"40\">".$row["apellido"]."</td>
-                        <td align=\"center\" height=\"40\">".$row["nivel"]."</td>
-                        <td align=\"center\" height=\"40\">".$row["sexo"]."</td>
+                        <td class=\"text\" align=\"center\" height=\"40\">".$row["nombre"]."</a></td>
+                        <td class=\"text\" align=\"center\" height=\"40\">".$row["apellido"]."</td>
+                        <td class=\"text\" align=\"center\" height=\"40\">".$row["nivel"]."</td>
+                        <td class=\"text\" align=\"center\" height=\"40\">".$row["sexo"]."</td>
                         </tr>";
                     }
                     echo "</tbody>";
                 }else{
-                    echo "0 results";
+                    echo "";
                 }
                 $conn ->close();
                 ?>
@@ -109,8 +109,8 @@ if(!isset($_SESSION['login_user_sys'])){
             include 'connect.php';
             $user = $_SESSION['login_user_sys'];
             
-            echo "<a class=\"botones\" href=\"joinPartido.php?partido=$idpartido&usuario=$user\">Únete al partido</a>";
-            echo "<a class=\"botones\" href=\"deleteJoinPartido.php?partido=$idpartido&usuario=$user\">Salir del partido</a>";
+            echo "<a class=\"botones\" href=\"model/joinPartido.php?partido=$idpartido&usuario=$user\">Únete al partido</a>";
+            echo "<a class=\"botones\" href=\"model/deleteJoinPartido.php?partido=$idpartido&usuario=$user\">Salir del partido</a>";
             ?>
         </section>
     </body>

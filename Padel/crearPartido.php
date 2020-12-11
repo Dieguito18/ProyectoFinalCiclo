@@ -4,7 +4,7 @@
 session_start();
 if(!isset($_SESSION['login_user_sys'])){
     echo "<script>
-            alert('ERROR! No has iniciado sesión.');
+            alert('Inicia sesión para acceder a esta página!');
             window.location= 'iniciaSesion.php'
         </script>";
     exit;
@@ -22,16 +22,16 @@ if(!isset($_SESSION['login_user_sys'])){
                 <nav>
                     <ul>
                         <li><a onclick="window.open('paginaPrincipal.php', '_self')">Inicio</a></li>
+                        <li><a onclick="window.open('informacionPadel.php', '_self')">Información</a></li>
                         <li><a onclick="window.open('crearPartido.php', '_self')">Crea Partido</a></li>
-                        <li><a onclick="window.open('acercaDe.php', '_self')">Información</a></li>
-                        <li><a onclick="window.open('iniciaSesion.php', '_self')">Inicia Sesión</a></li>
                         <li><a onclick="window.open('usuarioPadel.php', '_self')">Usuario</a></li>
+                        <li><a onclick="window.open('iniciaSesion.php', '_self')">Inicia Sesión</a></li>
                     </ul>
                 </nav>
             </section>
         </header>
         <p class="espacio"></p>
-        <form name= "inicia sesion" action= "insertPartido.php" method= "post">
+        <form name= "inicia sesion" action= "model/insertPartido.php" method= "post">
             <fieldset class="bordeForm">
                 <legend> Crear partido </legend>
                 <label>Fecha: </label><input type="date" name="fecha" required/>

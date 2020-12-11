@@ -8,13 +8,13 @@
         if(session_destroy()) {
             echo "<script>
                     alert('Usuario borrado correctamente!');
-                    window.location= 'paginaPrincipal.php'
+                    window.location= './../paginaPrincipal.php'
                 </script>";
         }
     }else{
         echo "<script>
-            alert('ERROR! no se ha podido borrar el usuario');
-            window.location= 'usuarioPadel.php'
+            alert('Error al borrar el usuario!');
+            window.location= './../usuarioPadel.php'
         </script>";
     }
 ?>

@@ -17,15 +17,15 @@ if ($counter==1){
             $id = $row["idusuarios"];
             $_SESSION['login_user_sys']=$id; // Iniciando la sesion
             echo "<script>
-                alert('Has iniciado sesión correctamente!.');
-                window.location= 'usuarioPadel.php'
+                alert('Has iniciado sesión correctamente!');
+                window.location= './../usuarioPadel.php'
             </script>";
         }
     }	
 } else {
     echo "<script>
-            alert('ERROR! El email o la contraseña son erróneos.');
-            window.location= 'iniciaSesion.php'
+            alert('Error al iniciar sesión, el email o la contraseña son erróneos!');
+            window.location= './../iniciaSesion.php'
         </script>";
 }
 ?>

@@ -18,8 +18,8 @@
                     }
                 }else {
                     echo "<script>
-                    alert('ERROR! Ya hay 4 jugadores que se han unido.');
-                    window.location= 'paginaPrincipal.php'
+                    alert('Error al unirte al partido, ya hay 4 jugadores que se han unido!');
+                    window.location= './../paginaPrincipal.php'
                 </script>";
                 }
             }
@@ -28,8 +28,8 @@
         }
         if (mysqli_query($conn, $sql) ){
         echo "<script>
-            alert('Te has unido correctamente!');
-            window.location= 'paginaPrincipal.php'
+            alert('Te has unido correctamente al partido!');
+            window.location= './../paginaPrincipal.php'
         </script>";
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
@@ -37,8 +37,8 @@
     } else {
         //echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         echo "<script>
-        alert('ERROR! Ya te has unido a este partido.');
-        window.location= 'paginaPrincipal.php'
+        alert('Error al unirte al partido, ya te has unido a este partido!');
+        window.location= './../paginaPrincipal.php'
     </script>";
     }
 ?>

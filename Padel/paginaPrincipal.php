@@ -4,19 +4,28 @@
         <title>Partidos Disponibles</title>
         <meta chartset="UTF-8"/>
         <link rel="stylesheet" href="css/estilos.css" type="text/css"/>
-        
+        <script src="js/jquery.flexslider.js"></script>
+        <script type="text/javascript" charset="utf-8">
+        $(window).load(function() {
+            $('.flexslider').flexslider({
+                touch: true,
+                pauseOnAction: false,
+                pauseOnHover: false,
+            });
+        });
+        </script>
     </head>
     
-    <body">
+    <body>
         <header>
             <section class="wrapper">
                 <nav>
                     <ul>
                         <li><a onclick="window.open('paginaPrincipal.php', '_self')">Inicio</a></li>
+                        <li><a onclick="window.open('informacionPadel.php', '_self')">Información</a></li>
                         <li><a onclick="window.open('crearPartido.php', '_self')">Crea Partido</a></li>
-                        <li><a onclick="window.open('acercaDe.php', '_self')">Información</a></li>
-                        <li><a class="right" onclick="window.open('iniciaSesion.php', '_self')">Inicia Sesión</a></li>
                         <li><a onclick="window.open('usuarioPadel.php', '_self')">Usuario</a></li>
+                        <li><a onclick="window.open('iniciaSesion.php', '_self')">Inicia Sesión</a></li>
                     </ul>
                 </nav>
             </section>
@@ -40,15 +49,15 @@
             </div>
             <h1 class="title">Lista de Partidos disponibles</hr></h1>
 
-            <table width="100%"  border="0" align="center" cellspacing="0">
+            <table class="espacio" width="100%"  border="0" align="center" cellspacing="0">
                 <thead>
                     <tr>
-                        <td align="center" height="30" bgcolor="#6699FF">Partido</td>
-                        <td align="center" height="30" bgcolor="#6699FF">Personas</td>
-                        <td align="center" height="30" bgcolor="#6699FF">Nivel</td>
-                        <td align="center" height="30" bgcolor="#6699FF">Sexo</td>
-                        <td align="center" height="30" bgcolor="#6699FF">Hora</td>
-                        <td align="center" height="30" bgcolor="#6699FF">Fecha</td>
+                        <td class="text" align="center" height="30" bgcolor="#6699FF">Partido</td>
+                        <td class="text" align="center" height="30" bgcolor="#6699FF">Personas</td>
+                        <td class="text" align="center" height="30" bgcolor="#6699FF">Nivel</td>
+                        <td class="text" align="center" height="30" bgcolor="#6699FF">Sexo</td>
+                        <td class="text" align="center" height="30" bgcolor="#6699FF">Hora</td>
+                        <td class="text" align="center" height="30" bgcolor="#6699FF">Fecha</td>
                     </tr>
                 </thead>
 
@@ -62,21 +71,23 @@
                         while($row = $result-> fetch_assoc()){
                             $id = $row["idpartidos"];
                             echo "<tr>
-                            <td align=\"center\" height=\"40\"><a href=\"unirsePartido.php?idpartido=$id\">".$row["partido"]."</a></td>
-                            <td align=\"center\" height=\"40\">".$row["numPersonas"]."</td>
-                            <td align=\"center\" height=\"40\">".$row["nivel"]."</td>
-                            <td align=\"center\" height=\"40\">".$row["sexo"]."</td>
-                            <td align=\"center\" height=\"40\">".$row["horaComienzo"]." a ".$row["horaFin"]."</td>
-                            <td align=\"center\" height=\"40\">".$row["fecha"]."</td>
+                            <td class=\"text\" align=\"center\" height=\"40\"><a href=\"unirsePartido.php?idpartido=$id\">".$row["partido"]."</a></td>
+                            <td class=\"text\" align=\"center\" height=\"40\">".$row["numPersonas"]."</td>
+                            <td class=\"text\" align=\"center\" height=\"40\">".$row["nivel"]."</td>
+                            <td class=\"text\" align=\"center\" height=\"40\">".$row["sexo"]."</td>
+                            <td class=\"text\" align=\"center\" height=\"40\">".$row["horaComienzo"]." a ".$row["horaFin"]."</td>
+                            <td class=\"text\" align=\"center\" height=\"40\">".$row["fecha"]."</td>
                             </tr>";
                         }
                         echo "</tbody>";
                     }else{
-                        echo "0 results";
+                        echo "";
                     }
                     $conn ->close();
                 ?>
             </table>
+            <!--<h1 class="title">Noticias sobre el mundo del Padel!</h1>-->
+            
         </section>
     </body>
 </html>
