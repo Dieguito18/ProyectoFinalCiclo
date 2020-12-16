@@ -1,7 +1,7 @@
 <!DOCTIPE html>
 <html lang="es">
     <head>
-        <title>Partidos Disponibles</title>
+        <title>Información</title>
         <meta chartset="UTF-8"/>
 		<link rel="stylesheet" href="css/estilos.css" type="text/css"/>
     </head>

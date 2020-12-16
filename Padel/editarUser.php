@@ -1,7 +1,7 @@
 <!DOCTIPE html>
 <html lang="es">
     <head>
-        <title>Registrarse</title>
+        <title>Editar usuario</title>
         <meta chartset="UTF-8"/>
         <link rel="stylesheet" href="css/estiloFormularios.css" type="text/css"/>
     </head>

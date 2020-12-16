@@ -11,7 +11,7 @@ if(!isset($_SESSION['login_user_sys'])){
 }
 ?>
     <head>
-        <title>Partidos Disponibles</title>
+        <title>Datos del partido</title>
         <meta chartset="UTF-8"/>
         <link rel="stylesheet" href="css/estilos.css" type="text/css"/>
     </head>

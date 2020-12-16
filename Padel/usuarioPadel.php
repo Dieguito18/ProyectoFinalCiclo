@@ -11,7 +11,7 @@ if(!isset($_SESSION['login_user_sys'])){
 }
 ?>
     <head>
-        <title>Partidos Disponibles</title>
+        <title>Usuario</title>
         <meta chartset="UTF-8"/>
         <link rel="stylesheet" href="css/estilos.css?1.0" type="text/css"/>
     </head>
