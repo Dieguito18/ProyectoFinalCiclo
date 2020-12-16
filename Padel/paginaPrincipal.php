@@ -64,7 +64,6 @@
                 <?php
                     include 'connect.php';
                     $hoy = date('Y-m-d');
-                    //echo $hoy;
                     $result = $conn ->query("SELECT * from partidos WHERE partido='Disponible' and fecha>='$hoy' ORDER BY fecha ASC");
                     if($result-> num_rows >0){
                         echo "<tbody>";
@@ -82,6 +81,9 @@
                         echo "</tbody>";
                     }else{
                         echo "";
+                    }
+                    $sql = "UPDATE partidos SET partido='No Disponible' WHERE  fecha<'$hoy'";
+                    if (mysqli_query($conn, $sql) ){
                     }
                     $conn ->close();
                 ?>

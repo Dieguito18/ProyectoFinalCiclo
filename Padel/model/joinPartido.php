@@ -12,7 +12,7 @@
                 if ($numPersonas<4){
                     $numPersonas = $numPersonas+1;
                     if ($numPersonas==4){
-                        $sql = "UPDATE partidos SET numPersonas='$numPersonas', partido='No Disponible' WHERE idpartidos='$idpartido'";
+                        $sql = "UPDATE partidos SET numPersonas='$numPersonas', partido='Cerrado' WHERE idpartidos='$idpartido'";
                     }else{
                         $sql = "UPDATE partidos SET numPersonas='$numPersonas' WHERE idpartidos='$idpartido'";
                     }
